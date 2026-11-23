@@ -29,9 +29,17 @@ docs/                架构与隐私政策
 
 ```bash
 pnpm install
-pnpm dev:weapp      # 构建到 apps/mini/dist，用微信开发者工具打开
-pnpm dev:h5         # 构建 H5 预览
+pnpm dev:weapp      # 构建到 apps/mini/dist/weapp，用微信开发者工具打开
+pnpm dev:h5         # 构建到 apps/mini/dist/h5
 ```
+
+构建产物按平台隔离：
+
+| 目标 | 输出 |
+|---|---|
+| 微信小程序 | `apps/mini/dist/weapp` |
+| H5 | `apps/mini/dist/h5` |
+| 后续支付宝 / 抖音 | `apps/mini/dist/alipay`、`apps/mini/dist/tt` |
 
 ## 脚本
 

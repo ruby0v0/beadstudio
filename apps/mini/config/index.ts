@@ -35,8 +35,8 @@ export default defineConfig<'vite'>(async (merge) => {
       828: 1.81 / 2,
     },
     sourceRoot: 'src',
-    // Keep the mini program output at dist/ (WeChat DevTools reads it) and H5 separate.
-    outputRoot: process.env.TARO_ENV === 'h5' ? 'dist-h5' : 'dist',
+    // One output directory per platform: dist/weapp, dist/h5, dist/alipay, ...
+    outputRoot: `dist/${process.env.TARO_ENV}`,
     plugins: [],
     defineConstants: {},
     copy: {

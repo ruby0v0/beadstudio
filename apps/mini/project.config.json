@@ -1,5 +1,5 @@
 {
-  "miniprogramRoot": "dist/",
+  "miniprogramRoot": "dist/weapp/",
   "projectname": "beadstudio",
   "description": "BeadStudio - image to perler bead pattern",
   "appid": "touristappid",
@@ -19,7 +19,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "3.7.8",
-  "srcMiniprogramRoot": "dist/",
+  "srcMiniprogramRoot": "dist/weapp/",
   "packOptions": {
     "ignore": [],
     "include": []
