@@ -1,4 +1,4 @@
-# BeadStudio 隐私政策（草案）
+# BeadStudio 隐私政策
 
 更新日期：2026-11-22
 
