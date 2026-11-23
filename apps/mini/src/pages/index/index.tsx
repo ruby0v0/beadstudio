@@ -30,7 +30,7 @@ export default function Index() {
       </View>
 
       <View className="mt-6 inline-flex items-center justify-center rounded-xl bg-teal-600 px-5 py-3 text-white">
-        <Text>选择图片（下一步实现）</Text>
+        <Text>选择图片</Text>
       </View>
     </View>
   )

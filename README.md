@@ -1,8 +1,14 @@
 # BeadStudio
 
-把图片变成能照着拼的拼豆图纸。微信小程序，免费、开源、零后端。
+BeadStudio 是一个把图片转换为拼豆图纸的微信小程序。上传图片、设置网格尺寸和颜色数量，即可生成带网格、色号、图例和用量清单的图纸。
 
-> 当前状态：工程骨架（D1）。页面与核心算法正在开发中。
+## 功能
+
+- 图片导入与裁剪适配
+- 网格尺寸、颜色数量、色卡、抖动等参数
+- 网格预览、色号图例、每色颗数统计
+- 图纸导出与保存
+- 自定义色卡导入
 
 ## 技术栈
 
@@ -18,9 +24,9 @@
 ## 仓库结构
 
 ```text
-apps/mini/           微信小程序（当前首发端）
+apps/mini/           微信小程序
 packages/core/       纯 TypeScript 核心：图纸模型、量化、渲染
-packages/palettes/   色卡 schema 与项目自建通用色卡
+packages/palettes/   色卡 schema 与通用色卡
 packages/ui/         自建 Taro/React 组件
 docs/                架构与隐私政策
 ```
@@ -28,7 +34,7 @@ docs/                架构与隐私政策
 ## 文档
 
 - [架构说明](docs/architecture.md)
-- [隐私政策（草案）](docs/privacy.md)
+- [隐私政策](docs/privacy.md)
 
 ## 开发
 
@@ -38,13 +44,12 @@ pnpm dev:weapp      # 构建到 apps/mini/dist/weapp，用微信开发者工具�
 pnpm dev:h5         # 构建到 apps/mini/dist/h5
 ```
 
-构建产物按平台隔离：
+构建产物：
 
 | 目标 | 输出 |
 |---|---|
 | 微信小程序 | `apps/mini/dist/weapp` |
 | H5 | `apps/mini/dist/h5` |
-| 后续支付宝 / 抖音 | `apps/mini/dist/alipay`、`apps/mini/dist/tt` |
 
 ## 脚本
 
@@ -56,13 +61,6 @@ pnpm dev:h5         # 构建到 apps/mini/dist/h5
 | `pnpm lint` | Biome 检查 |
 | `pnpm test` | Vitest 单元测试 |
 | `pnpm format` | Biome 自动修复 |
-
-## 设计原则
-
-- **零后端**：图片解码、缩放、配色、渲染全部在端侧完成，图片不上传。
-- **首版只做生成**：小程序不做逐格编辑；编辑能力留给未来桌面端。
-- **色卡可插拔**：首版内置项目自建通用色卡，支持用户导入 JSON/CSV；不打包未确认授权的品牌色卡。
-- **共享图纸模型**：`PatternDocument` 是版本化 JSON，未来桌面编辑器可直接复用。
 
 ## 许可
 
