@@ -27,7 +27,6 @@ docs/                架构与隐私政策
 
 ## 文档
 
-- [开发与测试验收任务书](docs/development-and-acceptance.md)
 - [架构说明](docs/architecture.md)
 - [隐私政策（草案）](docs/privacy.md)
 
