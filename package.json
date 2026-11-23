@@ -1,0 +1,28 @@
+{
+  "name": "beadstudio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "BeadStudio - turn images into perler bead patterns, free and open source",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruby0v0/beadstudio.git"
+  },
+  "packageManager": "pnpm@8.6.12",
+  "scripts": {
+    "dev:weapp": "pnpm --filter @beadstudio/mini dev:weapp",
+    "build:weapp": "pnpm --filter @beadstudio/mini build:weapp",
+    "dev:h5": "pnpm --filter @beadstudio/mini dev:h5",
+    "build:h5": "pnpm --filter @beadstudio/mini build:h5",
+    "typecheck": "tsc -p packages/core/tsconfig.json --noEmit && tsc -p packages/palettes/tsconfig.json --noEmit && tsc -p apps/mini/tsconfig.json --noEmit",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.0.0",
+    "typescript": "5.6.2",
+    "vitest": "^3.0.0"
+  }
+}
